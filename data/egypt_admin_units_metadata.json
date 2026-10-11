@@ -1,0 +1,891 @@
+{
+  "schema_version": "masrdata-metadata/2.0",
+  "id": "egypt_admin_units",
+  "title_ar": "الدليل المرجعي للوحدات الإدارية المصرية",
+  "title_en": "Egypt Administrative Units Master Reference",
+  "domain": "المحافظات والجغرافيا الإدارية",
+  "keywords": [
+    "محافظات",
+    "مراكز",
+    "أقسام",
+    "شياخات",
+    "قرى",
+    "P-code",
+    "ISO 3166-2",
+    "حدود إدارية",
+    "administrative units",
+    "Egypt"
+  ],
+  "description_ar": "جدول مرجعي موحد لكل الوحدات الإدارية في مصر من الدولة حتى الشياخة والقرية، بكود ثابت وأسماء عربية وإنجليزية ووحدة أم ومساحة وإحداثيات، ليكون مفتاح الربط الجغرافي لكل قواعد المنصة.",
+  "model": "entities",
+  "coverage": {
+    "time_start": "2017-04-21",
+    "time_end": "2017-04-21",
+    "geo_level": "national/governorate/markaz-qism/shiakha-village",
+    "geo_count": 6109,
+    "units_by_level": {
+      "0": 1,
+      "1": 27,
+      "2": 365,
+      "3": 5716
+    }
+  },
+  "rows": 6109,
+  "columns": 27,
+  "join_keys": [
+    "unit_id",
+    "geo_code",
+    "iso_3166_2",
+    "adm1_id",
+    "adm2_id",
+    "name_ar_match"
+  ],
+  "sources": [
+    {
+      "source_id": 1,
+      "name": "Egypt - Subnational Administrative Boundaries (COD-AB), ملف egy_admin_boundaries.xlsx، الإصدار v01 (صالح من 2017-04-21)",
+      "publisher": "OCHA ROMENA / HDX، عن بيانات الجهاز المركزي للتعبئة العامة والإحصاء",
+      "url": "https://data.humdata.org/dataset/cod-ab-egy",
+      "type": "دولي/رسمي",
+      "license": "CC BY 3.0 IGO: إعادة النشر مسموحة مع الإسناد",
+      "notes": "الملف رفعه المستخدم في المحادثة بعد تنزيله من HDX، لأن الموقع محجوب من بيئة الجمع",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 2,
+      "name": "geoBoundaries EGY ADM2 (بيانات وصفية وحدود)",
+      "publisher": "William & Mary geoLab",
+      "url": "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/main/releaseData/gbOpen/EGY/ADM2/geoBoundaries-EGY-ADM2-metaData.json",
+      "type": "مفتوح",
+      "license": "CC BY 3.0 IGO (مشتق من المصدر 1)",
+      "notes": "استُخدم لتأكيد الترخيص والتحقق المتقاطع من أسماء المراكز والأقسام",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 3,
+      "name": "القاموس المرجعي لمنصة MasrData: رموز المحافظات وفق ISO 3166-2:EG",
+      "publisher": "منصة MasrData / المنظمة الدولية للمعايير",
+      "url": "https://www.iso.org/obp/ui/#iso:code:3166:EG",
+      "type": "مرجعي",
+      "license": "رموز معيارية عامة",
+      "notes": "مصدر رموز geo_code للمحافظات وأسماء العرض العربية",
+      "accessed_on": "2026-09-28"
+    }
+  ],
+  "update_frequency": "سنوياً، وعند صدور قرار بتعديل إداري أو إصدار جديد من COD-AB أو نتائج تعداد جديد",
+  "last_updated": "2026-09-28",
+  "next_update_expected": "عند صدور إصدار جديد من COD-AB أو خلال سنة (سبتمبر 2027)",
+  "version": "2026.09.28",
+  "quality_score": 4,
+  "known_limitations": [
+    "الحدود والأسماء تمثل إصدار v01 الصالح من 21 أبريل 2017 (مرجع تعداد 2017)؛ الأقسام والمدن المستحدثة بعده غير موجودة، ويحتاج سجل التغييرات الإدارية اللاحقة إلى رصد من قرارات رئيس الوزراء في الجريدة الرسمية.",
+    "المستوى 3 (5716 وحدة) بلا أسماء إنجليزية في المصدر.",
+    "عدد السكان حسب تعداد 2017 غير مضاف: موقع الجهاز المركزي للتعبئة العامة والإحصاء محجوب من بيئة الجمع.",
+    "نوع الوحدة مستخرج من بداية الاسم العربي فقط، ويُترك فارغاً إذا لم يحدده الاسم (أغلب المستوى 3).",
+    "التهجئات البديلة غير مضافة بعد؛ عمود name_ar_match يغطي الفروق الإملائية الشائعة فقط.",
+    "36 وحدة من المستوى 2 تتكرر أسماؤها الإنجليزية داخل المحافظة نفسها؛ الربط يجب أن يكون بـ unit_id.",
+    "14 وحدة من المستوى 2 (كلها خارج الزمام أو ظهير صحراوي) بلا تقسيم فرعي في المصدر.",
+    "المستوى 3 لا يغطي كامل المساحة في المحافظات الحدودية والصحراوية (يغطي المناطق المأهولة فقط)، ومجموع مساحات وحدات المستوى 3 في مركز أسوان (EG2802) أكبر من مساحته في المصدر."
+  ],
+  "suggested_tier": "free",
+  "citation": "منصة قواعد بيانات مصر (MasrData)، الدليل المرجعي للوحدات الإدارية المصرية، الإصدار 2026.09.28، 28 سبتمبر 2026. البيانات الأصلية: OCHA/HDX عن الجهاز المركزي للتعبئة العامة والإحصاء (CC BY 3.0 IGO).",
+  "example_questions": [
+    "كم مركزاً وقسماً وشياخة وقرية في كل محافظة، وأي المحافظات أكثر تفتتاً إدارياً؟",
+    "وحّد أسماء المناطق في ملف مرفوع واربطها بأكواد unit_id وgeo_code.",
+    "ما أكبر وأصغر المراكز والأقسام مساحة في كل محافظة؟"
+  ],
+  "data_files": [
+    {
+      "path": "egypt_admin_units.csv",
+      "format": "csv",
+      "encoding": "utf-8-sig",
+      "rows": 6109,
+      "columns": 27,
+      "primary_key": [
+        "unit_id"
+      ],
+      "role": "data"
+    },
+    {
+      "path": "egypt_admin_units.xlsx",
+      "format": "xlsx",
+      "role": "human-readable workbook (data + documentation)",
+      "sheets": [
+        "البيانات",
+        "المحافظات",
+        "أنواع الوحدات",
+        "قاموس المتغيرات",
+        "بطاقة الوصف",
+        "المصادر",
+        "سجل التغييرات",
+        "تقرير الجودة"
+      ]
+    },
+    {
+      "path": "egypt_admin_units_card.md",
+      "format": "markdown",
+      "role": "description card"
+    },
+    {
+      "path": "raw/egy_admin_boundaries.xlsx",
+      "format": "xlsx",
+      "role": "raw source file (CC BY 3.0 IGO)"
+    }
+  ],
+  "variables": [
+    {
+      "name": "unit_id",
+      "definition_ar": "كود الوحدة (P-code) من المصدر، ثابت وفريد؛ المفتاح الأساسي",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "EG، EG01، EG0103، EG010301…",
+      "empty_means_ar": "لا يوجد فراغ"
+    },
+    {
+      "name": "level",
+      "definition_ar": "المستوى الإداري",
+      "type": "عدد صحيح",
+      "unit": null,
+      "allowed_values": "0 الدولة، 1 محافظة، 2 مركز/قسم، 3 شياخة/قرية",
+      "empty_means_ar": "لا يوجد فراغ"
+    },
+    {
+      "name": "level_ar",
+      "definition_ar": "اسم المستوى بالعربية",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "الدولة، محافظة، مركز / قسم / مدينة، شياخة / قرية / مدينة",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "unit_type_code",
+      "definition_ar": "نوع الوحدة مستخرج من بداية الاسم العربي (محسوب)",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "country, governorate, qism, markaz, madina, zemam_out, port_police, shiakha, qarya",
+      "empty_means_ar": "الاسم لا يحدد النوع؛ لم يُستنتج"
+    },
+    {
+      "name": "unit_type_ar",
+      "definition_ar": "نوع الوحدة بالعربية (محسوب)",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "كما سبق"
+    },
+    {
+      "name": "name_ar",
+      "definition_ar": "الاسم العربي كما في المصدر بعد إزالة المسافات الزائدة فقط",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "لا يوجد فراغ"
+    },
+    {
+      "name": "name_ar_display",
+      "definition_ar": "اسم العرض: للمحافظات من القاموس المرجعي، ولباقي المستويات مطابق لـ name_ar",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "name_ar_match",
+      "definition_ar": "مفتاح مطابقة: توحيد الهمزات والتاء المربوطة والياء وحذف التشكيل (للمطابقة فقط، لا للعرض)",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "name_en",
+      "definition_ar": "الاسم الإنجليزي كما في المصدر",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "غير متاح في المصدر (كل المستوى 3)"
+    },
+    {
+      "name": "geo_code",
+      "definition_ar": "مفتاح الربط الجغرافي للمنصة: رمز ISO للمحافظات، وEG للدولة، وP-code لما دونها",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "EG-C… أو P-code",
+      "empty_means_ar": "لا يوجد فراغ"
+    },
+    {
+      "name": "iso_3166_2",
+      "definition_ar": "رمز ISO 3166-2:EG للمحافظات فقط",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "EG-C، EG-ALX…",
+      "empty_means_ar": "ليست محافظة"
+    },
+    {
+      "name": "parent_id",
+      "definition_ar": "كود الوحدة الأم المباشرة",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "unit_id لوحدة موجودة",
+      "empty_means_ar": "الدولة"
+    },
+    {
+      "name": "adm1_id / adm1_name_ar",
+      "definition_ar": "كود المحافظة التابعة لها الوحدة واسمها للعرض",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "الدولة"
+    },
+    {
+      "name": "adm2_id / adm2_name_ar",
+      "definition_ar": "كود المركز/القسم التابعة له الوحدة واسمه (للمستويين 2 و3)",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "المستويان 0 و1"
+    },
+    {
+      "name": "area_sqkm",
+      "definition_ar": "المساحة كما في المصدر (محسوبة من الحدود الرقمية)",
+      "type": "رقم عشري",
+      "unit": "كم²",
+      "allowed_values": "> 0",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "center_lat / center_lon",
+      "definition_ar": "إحداثيات مركز الوحدة (WGS84)",
+      "type": "رقم عشري",
+      "unit": "درجة",
+      "allowed_values": "خط عرض 21.5–32، طول 24.5–37.5",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "capital_name_en",
+      "definition_ar": "العاصمة الإدارية من طبقة التجمعات السكانية في المصدر (للدولة والمحافظات)",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "ليست دولة أو محافظة"
+    },
+    {
+      "name": "valid_on",
+      "definition_ar": "تاريخ صلاحية الحدود في المصدر",
+      "type": "تاريخ ISO",
+      "unit": null,
+      "allowed_values": "2017-04-21",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "source_version",
+      "definition_ar": "إصدار ملف المصدر",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "v01",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "source_id / source_url / accessed_on",
+      "definition_ar": "المصدر ورابطه وتاريخ الوصول",
+      "type": "نص/رابط/تاريخ",
+      "unit": null,
+      "allowed_values": "ورقة المصادر",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "is_derived_fields",
+      "definition_ar": "الأعمدة المحسوبة أو المضافة من المنصة وليست من المصدر",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "notes",
+      "definition_ar": "ملاحظات: اختلاف اسم العرض، تكرار الأسماء، نوع غير محدد",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "لا ملاحظات"
+    }
+  ],
+  "entities": {
+    "governorates": [
+      {
+        "unit_id": "EG01",
+        "iso_3166_2": "EG-C",
+        "name_ar_display": "القاهرة",
+        "name_ar_source": "القاهرة",
+        "name_en": "Cairo",
+        "capital_name_en": "Cairo",
+        "area_sqkm": 2888.813,
+        "adm2_count": 42,
+        "adm3_count": 324
+      },
+      {
+        "unit_id": "EG02",
+        "iso_3166_2": "EG-ALX",
+        "name_ar_display": "الإسكندرية",
+        "name_ar_source": "الاسكندرية",
+        "name_en": "Alexandria",
+        "capital_name_en": "Alexandria",
+        "area_sqkm": 2510.047,
+        "adm2_count": 19,
+        "adm3_count": 141
+      },
+      {
+        "unit_id": "EG03",
+        "iso_3166_2": "EG-PTS",
+        "name_ar_display": "بورسعيد",
+        "name_ar_source": "بورسعيد",
+        "name_en": "Port Said",
+        "capital_name_en": "Port Said",
+        "area_sqkm": 980.293,
+        "adm2_count": 12,
+        "adm3_count": 22
+      },
+      {
+        "unit_id": "EG04",
+        "iso_3166_2": "EG-SUZ",
+        "name_ar_display": "السويس",
+        "name_ar_source": "السويس",
+        "name_en": "Suez",
+        "capital_name_en": "Suez",
+        "area_sqkm": 9358.101,
+        "adm2_count": 6,
+        "adm3_count": 18
+      },
+      {
+        "unit_id": "EG11",
+        "iso_3166_2": "EG-DT",
+        "name_ar_display": "دمياط",
+        "name_ar_source": "دمياط",
+        "name_en": "Damietta",
+        "capital_name_en": "Damietta",
+        "area_sqkm": 752.89,
+        "adm2_count": 9,
+        "adm3_count": 101
+      },
+      {
+        "unit_id": "EG12",
+        "iso_3166_2": "EG-DK",
+        "name_ar_display": "الدقهلية",
+        "name_ar_source": "الدقهلية",
+        "name_en": "Dakahlia",
+        "capital_name_en": "El ManSura",
+        "area_sqkm": 3491.662,
+        "adm2_count": 21,
+        "adm3_count": 513
+      },
+      {
+        "unit_id": "EG13",
+        "iso_3166_2": "EG-SHR",
+        "name_ar_display": "الشرقية",
+        "name_ar_source": "الشرقية",
+        "name_en": "Sharkia",
+        "capital_name_en": "Zagazig",
+        "area_sqkm": 5333.953,
+        "adm2_count": 22,
+        "adm3_count": 531
+      },
+      {
+        "unit_id": "EG14",
+        "iso_3166_2": "EG-KB",
+        "name_ar_display": "القليوبية",
+        "name_ar_source": "القليوبية",
+        "name_en": "Kalyoubia",
+        "capital_name_en": "Benha",
+        "area_sqkm": 1132.103,
+        "adm2_count": 15,
+        "adm3_count": 216
+      },
+      {
+        "unit_id": "EG15",
+        "iso_3166_2": "EG-KFS",
+        "name_ar_display": "كفر الشيخ",
+        "name_ar_source": "كفر الشيخ",
+        "name_en": "Kafr El-Shikh",
+        "capital_name_en": "Kafr elSheikh",
+        "area_sqkm": 3265.058,
+        "adm2_count": 12,
+        "adm3_count": 226
+      },
+      {
+        "unit_id": "EG16",
+        "iso_3166_2": "EG-GH",
+        "name_ar_display": "الغربية",
+        "name_ar_source": "الغربية",
+        "name_en": "Gharbia",
+        "capital_name_en": "Tanta",
+        "area_sqkm": 1973.915,
+        "adm2_count": 12,
+        "adm3_count": 350
+      },
+      {
+        "unit_id": "EG17",
+        "iso_3166_2": "EG-MNF",
+        "name_ar_display": "المنوفية",
+        "name_ar_source": "المنوفية",
+        "name_en": "Menoufia",
+        "capital_name_en": "Shibin Elkom",
+        "area_sqkm": 2146.287,
+        "adm2_count": 12,
+        "adm3_count": 330
+      },
+      {
+        "unit_id": "EG18",
+        "iso_3166_2": "EG-BH",
+        "name_ar_display": "البحيرة",
+        "name_ar_source": "البحيرة",
+        "name_en": "Behera",
+        "capital_name_en": "Damanhur",
+        "area_sqkm": 11347.175,
+        "adm2_count": 19,
+        "adm3_count": 534
+      },
+      {
+        "unit_id": "EG19",
+        "iso_3166_2": "EG-IS",
+        "name_ar_display": "الإسماعيلية",
+        "name_ar_source": "الإسماعيلية",
+        "name_en": "Ismailia",
+        "capital_name_en": "Ismailia",
+        "area_sqkm": 5458.917,
+        "adm2_count": 8,
+        "adm3_count": 56
+      },
+      {
+        "unit_id": "EG21",
+        "iso_3166_2": "EG-GZ",
+        "name_ar_display": "الجيزة",
+        "name_ar_source": "الجيزة",
+        "name_en": "Giza",
+        "capital_name_en": "Elgiza",
+        "area_sqkm": 36326.416,
+        "adm2_count": 22,
+        "adm3_count": 239
+      },
+      {
+        "unit_id": "EG22",
+        "iso_3166_2": "EG-BNS",
+        "name_ar_display": "بني سويف",
+        "name_ar_source": "بنى سويف",
+        "name_en": "Beni Suef",
+        "capital_name_en": "Beni Suef",
+        "area_sqkm": 10613.296,
+        "adm2_count": 10,
+        "adm3_count": 240
+      },
+      {
+        "unit_id": "EG23",
+        "iso_3166_2": "EG-FYM",
+        "name_ar_display": "الفيوم",
+        "name_ar_source": "الفيوم",
+        "name_en": "Fayoum",
+        "capital_name_en": "Elfaiyum",
+        "area_sqkm": 5319.051,
+        "adm2_count": 9,
+        "adm3_count": 174
+      },
+      {
+        "unit_id": "EG24",
+        "iso_3166_2": "EG-MN",
+        "name_ar_display": "المنيا",
+        "name_ar_source": "المنيا",
+        "name_en": "Menia",
+        "capital_name_en": "El Minya",
+        "area_sqkm": 31295.349,
+        "adm2_count": 13,
+        "adm3_count": 378
+      },
+      {
+        "unit_id": "EG25",
+        "iso_3166_2": "EG-AST",
+        "name_ar_display": "أسيوط",
+        "name_ar_source": "أسيوط",
+        "name_en": "Assiut",
+        "capital_name_en": "Asyut",
+        "area_sqkm": 16428.194,
+        "adm2_count": 15,
+        "adm3_count": 261
+      },
+      {
+        "unit_id": "EG26",
+        "iso_3166_2": "EG-SHG",
+        "name_ar_display": "سوهاج",
+        "name_ar_source": "سوهاج",
+        "name_en": "Suhag",
+        "capital_name_en": "Sohag",
+        "area_sqkm": 9993.193,
+        "adm2_count": 20,
+        "adm3_count": 290
+      },
+      {
+        "unit_id": "EG27",
+        "iso_3166_2": "EG-KN",
+        "name_ar_display": "قنا",
+        "name_ar_source": "قنا",
+        "name_en": "Qena",
+        "capital_name_en": "Qena",
+        "area_sqkm": 13057.664,
+        "adm2_count": 14,
+        "adm3_count": 203
+      },
+      {
+        "unit_id": "EG28",
+        "iso_3166_2": "EG-ASN",
+        "name_ar_display": "أسوان",
+        "name_ar_source": "أسوان",
+        "name_en": "Aswan",
+        "capital_name_en": "Aswan",
+        "area_sqkm": 57733.672,
+        "adm2_count": 10,
+        "adm3_count": 122
+      },
+      {
+        "unit_id": "EG29",
+        "iso_3166_2": "EG-LX",
+        "name_ar_display": "الأقصر",
+        "name_ar_source": "مدينة الأقصر",
+        "name_en": "Luxor",
+        "capital_name_en": "Luxor",
+        "area_sqkm": 595.739,
+        "adm2_count": 4,
+        "adm3_count": 23
+      },
+      {
+        "unit_id": "EG31",
+        "iso_3166_2": "EG-BA",
+        "name_ar_display": "البحر الأحمر",
+        "name_ar_source": "البحر الأحمر",
+        "name_en": "Red Sea",
+        "capital_name_en": "Hurghada",
+        "area_sqkm": 121331.888,
+        "adm2_count": 8,
+        "adm3_count": 41
+      },
+      {
+        "unit_id": "EG32",
+        "iso_3166_2": "EG-WAD",
+        "name_ar_display": "الوادي الجديد",
+        "name_ar_source": "الوادى الجديد",
+        "name_en": "New Valley",
+        "capital_name_en": "El Kharga",
+        "area_sqkm": 426810.509,
+        "adm2_count": 4,
+        "adm3_count": 75
+      },
+      {
+        "unit_id": "EG33",
+        "iso_3166_2": "EG-MT",
+        "name_ar_display": "مطروح",
+        "name_ar_source": "مطروح",
+        "name_en": "Matrouh",
+        "capital_name_en": "Matruh",
+        "area_sqkm": 158449.639,
+        "adm2_count": 8,
+        "adm3_count": 113
+      },
+      {
+        "unit_id": "EG34",
+        "iso_3166_2": "EG-SIN",
+        "name_ar_display": "شمال سيناء",
+        "name_ar_source": "شمال سيناء",
+        "name_en": "North Sinai",
+        "capital_name_en": "Elarish",
+        "area_sqkm": 26581.521,
+        "adm2_count": 11,
+        "adm3_count": 96
+      },
+      {
+        "unit_id": "EG35",
+        "iso_3166_2": "EG-JS",
+        "name_ar_display": "جنوب سيناء",
+        "name_ar_source": "جنوب سيناء",
+        "name_en": "South Sinai",
+        "capital_name_en": "Tor",
+        "area_sqkm": 29378.11,
+        "adm2_count": 8,
+        "adm3_count": 99
+      }
+    ],
+    "unit_types": [
+      {
+        "level": 0,
+        "unit_type_code": "country",
+        "unit_type_ar": "دولة",
+        "count": 1
+      },
+      {
+        "level": 1,
+        "unit_type_code": "governorate",
+        "unit_type_ar": "محافظة",
+        "count": 27
+      },
+      {
+        "level": 2,
+        "unit_type_code": "madina",
+        "unit_type_ar": "مدينة",
+        "count": 9
+      },
+      {
+        "level": 2,
+        "unit_type_code": "markaz",
+        "unit_type_ar": "مركز",
+        "count": 165
+      },
+      {
+        "level": 2,
+        "unit_type_code": "port_police",
+        "unit_type_ar": "إدارة شرطة ميناء",
+        "count": 4
+      },
+      {
+        "level": 2,
+        "unit_type_code": "qism",
+        "unit_type_ar": "قسم",
+        "count": 170
+      },
+      {
+        "level": 2,
+        "unit_type_code": "zemam_out",
+        "unit_type_ar": "خارج الزمام / ظهير صحراوي",
+        "count": 14
+      },
+      {
+        "level": 3,
+        "unit_type_code": "madina",
+        "unit_type_ar": "مدينة",
+        "count": 210
+      },
+      {
+        "level": 3,
+        "unit_type_code": "qarya",
+        "unit_type_ar": "قرية",
+        "count": 17
+      },
+      {
+        "level": 3,
+        "unit_type_code": "qism",
+        "unit_type_ar": "قسم",
+        "count": 32
+      },
+      {
+        "level": 3,
+        "unit_type_code": "shiakha",
+        "unit_type_ar": "شياخة",
+        "count": 53
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "إصدار أول",
+      "item": "كل القاعدة",
+      "rejected_value_ar": null,
+      "adopted_value_ar": null,
+      "decision_ar": "بناء الدليل من ملف COD-AB (المصدر 1) بمستوياته الأربعة (0–3)"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "توحيد اسم عرض",
+      "item": "EG02",
+      "rejected_value_ar": "الاسكندرية",
+      "adopted_value_ar": "الإسكندرية",
+      "decision_ar": "فرق همزات/ياء فقط؛ الاسم الأصلي محفوظ في name_ar"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "توحيد اسم عرض",
+      "item": "EG22",
+      "rejected_value_ar": "بنى سويف",
+      "adopted_value_ar": "بني سويف",
+      "decision_ar": "فرق همزات/ياء فقط؛ الاسم الأصلي محفوظ في name_ar"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "توحيد اسم عرض",
+      "item": "EG29",
+      "rejected_value_ar": "مدينة الأقصر",
+      "adopted_value_ar": "الأقصر",
+      "decision_ar": "اسم العرض من القاموس المرجعي (المصدر 3)؛ الاسم الأصلي محفوظ في name_ar"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "توحيد اسم عرض",
+      "item": "EG32",
+      "rejected_value_ar": "الوادى الجديد",
+      "adopted_value_ar": "الوادي الجديد",
+      "decision_ar": "فرق همزات/ياء فقط؛ الاسم الأصلي محفوظ في name_ar"
+    }
+  ],
+  "quality_report": {
+    "score": 4,
+    "scale_ar": "5 رسمي/دولي مكتمل بلا فجوات والعينة مطابقة؛ 4 فجوات بسيطة موثقة؛ 3 رصد متعدد المصادر أو فجوات متوسطة؛ 2 مصدر واحد غير رسمي أو فجوات كبيرة؛ 1 تجريبية",
+    "score_reason_ar": "مصدر رسمي/دولي مكتمل وسليم الربط والعينة مطابقة، لكن الحدود مرجعها 2017 وينقصه الأسماء الإنجليزية للمستوى 3 وعدد السكان",
+    "checks": [
+      {
+        "check_ar": "تكرار المفتاح unit_id",
+        "scope": "كل الصفوف",
+        "result_ar": "0 مكرر",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "سلامة الربط بالوحدة الأم",
+        "scope": "parent_id",
+        "result_ar": "0 صف بلا وحدة أم موجودة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "اتساق كود P-code مع الوحدة الأم",
+        "scope": "المستوى 3",
+        "result_ar": "0 صف يخالف قاعدة البادئة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "عدد الوحدات لكل مستوى",
+        "scope": "level",
+        "result_ar": "0: 1، 1: 27، 2: 365، 3: 5716",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مجموع مساحات المحافظات مقابل مساحة الدولة",
+        "scope": "area_sqkm",
+        "result_ar": "المحافظات 994,553.5 كم² مقابل الدولة 994,553.5 كم² (فرق -0.000%)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مجموع مساحات المراكز والأقسام مقابل مساحة المحافظة",
+        "scope": "المستوى 2",
+        "result_ar": "أقصى فرق 0.000%؛ 0 محافظة بفرق > 1%",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مجموع مساحات المستوى 3 مقابل مساحة الوحدة الأم",
+        "scope": "المستوى 3",
+        "result_ar": "41 وحدة أم بفرق > 1%: 40 أقل من المساحة (المستوى 3 يغطي المناطق المأهولة فقط في المحافظات الحدودية والصحراوية مثل مطروح والوادي الجديد والبحر الأحمر وسيناء) و1 أكبر: EG2802 (مجموع وحداته 3,083 كم² مقابل 130 كم² للوحدة الأم)",
+        "action_ar": "لا تعديل في القيم الأصلية؛ توثيق في القيود وملاحظات الصفوف"
+      },
+      {
+        "check_ar": "وحدات مستوى 2 بلا تقسيم فرعي",
+        "scope": "المستوى 2",
+        "result_ar": "14 وحدة: EG0100, EG0200, EG1300, EG1400, EG1800, EG2100, EG2200, EG2300, EG2400, EG2500, EG2600, EG2700, EG2800, EG2900",
+        "action_ar": "توثيق في القيود (أغلبها خارج الزمام أو إدارات شرطة الموانئ)"
+      },
+      {
+        "check_ar": "مساحات صفرية أو سالبة",
+        "scope": "area_sqkm",
+        "result_ar": "0 صف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "إحداثيات المركز داخل نطاق مصر",
+        "scope": "center_lat/center_lon",
+        "result_ar": "0 صف خارج النطاق",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "أسماء عربية فارغة",
+        "scope": "name_ar",
+        "result_ar": "0 صف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "أسماء إنجليزية فارغة",
+        "scope": "name_en",
+        "result_ar": "5716 صف (كل المستوى 3 بلا أسماء إنجليزية في المصدر)",
+        "action_ar": "توثيق في القيود"
+      },
+      {
+        "check_ar": "تكرار الاسم العربي داخل الوحدة الأم نفسها",
+        "scope": "المستوى 3",
+        "result_ar": "0 صف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "تكرار الاسم الإنجليزي داخل المحافظة",
+        "scope": "المستوى 2",
+        "result_ar": "36 وحدة (أزواج بنفس الاسم الإنجليزي وأسماء عربية مختلفة)",
+        "action_ar": "توثيق في notes"
+      },
+      {
+        "check_ar": "نوع الوحدة غير محدد من الاسم",
+        "scope": "unit_type_code",
+        "result_ar": "المستوى 2: 3 (EG0106, EG0134, EG0218)؛ المستوى 3: 5404 من 5716",
+        "action_ar": "يُترك فارغاً ولا يُستنتج"
+      },
+      {
+        "check_ar": "تحقق متقاطع مع geoBoundaries (المصدر 2)",
+        "scope": "أسماء المستوى 2",
+        "result_ar": "365 وحدة في geoBoundaries مقابل 365؛ الأسماء الإنجليزية الفريدة: 330 من 331 مطابقة؛ الفرق الوحيد: ['Shubra Khît'] ↔ ['Shubra Khit']",
+        "action_ar": "فرق تهجئة حرف واحد؛ لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG160503 حسين سيد",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG241244 نزلةتندة",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG180620 نظارةالسعيدية",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG220822 نزلةسعيد",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG120816 الشوامي",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG250910 الشيخعونالله",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG220711 أمالجنازير",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG211506 الرقةالبحرية",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG170106 ميت خاقان وحصتها",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية مقابل الملف الأصلي",
+        "scope": "EG220429 كفرمنسابة",
+        "result_ar": "مطابق (الاسم والمساحة والوحدة الأم)",
+        "action_ar": "لا إجراء"
+      }
+    ],
+    "manual_sample": {
+      "size": 10,
+      "matched": 10
+    }
+  }
+}

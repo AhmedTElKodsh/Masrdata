@@ -1,0 +1,1395 @@
+{
+  "schema_version": "masrdata-metadata/2.0",
+  "id": "egypt_preuniversity_education_indicators",
+  "title_ar": "مؤشرات التعليم قبل الجامعي بالمحافظة",
+  "title_en": "Pre-University Education Indicators by Governorate",
+  "domain": "التعليم",
+  "keywords": [
+    "تعليم",
+    "مدارس",
+    "فصول",
+    "كثافة الفصل",
+    "مدرسين",
+    "عجز المعلمين",
+    "القيد",
+    "الاستيعاب",
+    "محافظات",
+    "EMIS",
+    "Egypt education"
+  ],
+  "description_ar": "مؤشرات التعليم قبل الجامعي لكل محافظة ولكل مرحلة في العام الدراسي 2025/2026: المدارس والفصول والتلاميذ والمدرسون ونسب القيد والاستيعاب، مع مؤشرات محسوبة لكثافة الفصل ونصيب المدرس من التلاميذ، مستخرجة من كتاب الإحصاء السنوي لوزارة التربية والتعليم.",
+  "model": "indicators",
+  "coverage": {
+    "time_start": "2025/26",
+    "time_end": "2025/26",
+    "geo_level": "national/governorate",
+    "geo_count": 28,
+    "stages": 12
+  },
+  "rows": 12012,
+  "columns": 17,
+  "join_keys": [
+    "geo_code",
+    "period",
+    "stage",
+    "indicator_code"
+  ],
+  "sources": [
+    {
+      "source_id": 1,
+      "name": "كتاب الإحصاء السنوي للتعليم قبل الجامعي 2025/2026 (Yreabook25-26.pdf، 485 صفحة)",
+      "publisher": "وزارة التربية والتعليم والتعليم الفني — الإدارة العامة لنظم المعلومات ودعم القرار (EMIS)",
+      "url": "https://emis.gov.eg/statistics/books/2025-2026/pdf/Yreabook25-26.pdf",
+      "type": "رسمي",
+      "license": "إحصاءات حكومية منشورة للعموم؛ إعادة النشر مع الإسناد",
+      "notes": "الملف رفعه المستخدم بعد تنزيله، لأن بوابة EMIS محجوبة من بيئة الجمع",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 2,
+      "name": "صفحة كتاب الإحصاء السنوي 2025/2026",
+      "publisher": "EMIS",
+      "url": "https://emis.gov.eg/statistics/books/2025-2026/main_book25-26.html",
+      "type": "رسمي",
+      "license": "—",
+      "notes": "صفحة الفهرس وروابط الفصول",
+      "accessed_on": "2026-09-28"
+    }
+  ],
+  "update_frequency": "سنوياً مع صدور الكتاب الإحصائي (عادة في الربع الأخير من السنة)",
+  "last_updated": "2026-09-28",
+  "next_update_expected": "مع صدور كتاب 2026/2027 (متوقع في الربع الأخير من 2027)",
+  "version": "2026.09.28",
+  "quality_score": 4,
+  "known_limitations": [
+    "سنة دراسية واحدة (2025/2026) في هذا الإصدار؛ السلاسل الزمنية تحتاج الكتب السابقة أو الفصل الأول من الكتاب (اتجاهات خمس سنوات، على المستوى القومي فقط).",
+    "مستوى المحافظة (المديرية) فقط؛ الكتاب لا ينشر جداول الإدارات التعليمية في الفصول المستخدمة.",
+    "التعليم الأزهري غير مشمول؛ الكتاب يغطي مدارس وزارة التربية والتعليم فقط.",
+    "بيانات الامتحانات (الفصل 3، عام 2024/2025) غير مضافة في هذا الإصدار.",
+    "نصيب المدرس المنشور (PTR_PUB) متاح لست مراحل مجمّعة فقط (والتعليم الفني جملة)؛ PTR_CALC يغطي كل المراحل ويطابق المنشور حيث يتوفر الاثنان.",
+    "نسب القيد الصافي المنشورة تتجاوز 100% في الإعدادي لأغلب المحافظات وفي الابتدائي لبعضها، بسبب تقديرات السكان المستخدمة في المصدر؛ تُستخدم للمقارنة بحذر.",
+    "عمود source_page يشير لترقيم ملف PDF (485 صفحة) لا لترقيم الكتاب المطبوع."
+  ],
+  "suggested_tier": "free",
+  "citation": "منصة قواعد بيانات مصر (MasrData)، مؤشرات التعليم قبل الجامعي بالمحافظة، الإصدار 2026.09.28، 28 سبتمبر 2026. البيانات الأصلية: وزارة التربية والتعليم، كتاب الإحصاء السنوي 2025/2026.",
+  "example_questions": [
+    "ما متوسط كثافة الفصل في المرحلة الابتدائية في كل محافظة، وأي المحافظات أعلى من 50 تلميذاً للفصل؟",
+    "رتّب المحافظات حسب نصيب المدرس من التلاميذ في المرحلة الإعدادية.",
+    "ما نسبة تلاميذ التعليم الخاص في كل محافظة، وهل ترتبط بارتفاع كثافة الفصول الحكومية؟"
+  ],
+  "data_files": [
+    {
+      "path": "egypt_preuniversity_education_indicators.csv",
+      "format": "csv",
+      "encoding": "utf-8-sig",
+      "rows": 12012,
+      "columns": 17,
+      "primary_key": [
+        "geo_code",
+        "stage",
+        "indicator_code",
+        "period"
+      ],
+      "role": "data"
+    },
+    {
+      "path": "egypt_preuniversity_education_indicators.xlsx",
+      "format": "xlsx",
+      "role": "human-readable workbook (data + documentation)",
+      "sheets": [
+        "البيانات",
+        "المؤشرات",
+        "خريطة الصفحات",
+        "قاموس المتغيرات",
+        "بطاقة الوصف",
+        "المصادر",
+        "سجل التغييرات",
+        "تقرير الجودة"
+      ]
+    },
+    {
+      "path": "egypt_preuniversity_education_indicators_card.md",
+      "format": "markdown",
+      "role": "description card"
+    },
+    {
+      "path": "raw/Yreabook25-26.pdf",
+      "format": "pdf",
+      "role": "raw source file"
+    }
+  ],
+  "variables": [
+    {
+      "name": "obs_id",
+      "definition_ar": "معرّف فريد للصف",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "OBS00001…",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "indicator_code",
+      "definition_ar": "رمز المؤشر (شوف ورقة المؤشرات)",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "SCH_TOT, CLS_TOT, SCH_GOV, CLS_GOV, SCH_PRV, CLS_PRV, SCH_URB, CLS_URB, SCH_RUR, CLS_RUR, STU_TOT, STU_BOYS, STU_GIRLS, STU_GOV_B, STU_GOV_G, STU_PRV_B, STU_PRV_G, STU_URB_B, STU_URB_G, STU_RUR_B, STU_RUR_G, TCH_TOT, TCH_M, TCH_F, TCH_HIGH_M, TCH_HIGH_F, TCH_MID_M, TCH_MID_F, POP_AGE, ENR_NET_N, ENR_TOT_N, GER, NER, G1_ENR, POP6, G1_AGE6, GIR, NIR, G1_ENR_B, POP6_B, G1_AGE6_B, GIR_B, NIR_B, G1_ENR_G, POP6_G, G1_AGE6_G, GIR_G, NIR_G, PTR_PUB, CLASS_DENSITY, PTR_CALC, SHARE_PRIVATE_STU, SHARE_GIRLS, SHARE_RURAL_STU",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "indicator_ar",
+      "definition_ar": "اسم المؤشر بالعربية",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "indicator_group",
+      "definition_ar": "مجموعة المؤشر",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "المدارس والفصول، التلاميذ، المدرسون، القيد، الاستيعاب، المؤشرات، المؤشرات المحسوبة",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "stage / stage_ar",
+      "definition_ar": "المرحلة التعليمية",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "ALL, KG, PRI, COM, PREP, SEC_GEN, SEC_IND, SEC_AGR, SEC_COM, SEC_HOT, SPED, TECH",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "geo_level",
+      "definition_ar": "المستوى الجغرافي",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "national / governorate",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "geo_code / geo_name_ar",
+      "definition_ar": "رمز المحافظة (ISO 3166-2:EG) واسمها، وEG للإجمالي القومي",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "EG-C… / EG",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "period",
+      "definition_ar": "العام الدراسي",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "2025/26",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "period_type",
+      "definition_ar": "نوع الفترة",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "school_year",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "value",
+      "definition_ar": "القيمة الرقمية كما في المصدر، أو المحسوبة إذا is_derived = True",
+      "type": "رقم",
+      "unit": null,
+      "allowed_values": "≥ 0",
+      "empty_means_ar": "خلية فارغة في المصدر (السبب في notes)"
+    },
+    {
+      "name": "unit",
+      "definition_ar": "وحدة القيمة",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "مدرسة، فصل، تلميذ، مدرس، نسمة، %، تلميذ/فصل، تلميذ/مدرس",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "is_derived",
+      "definition_ar": "True للقيم المحسوبة من المنصة (طريقة الحساب في notes)",
+      "type": "منطقي",
+      "unit": null,
+      "allowed_values": "True / False",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "source_id",
+      "definition_ar": "رقم المصدر في ورقة المصادر (المحسوب يرجع لمكوّناته في المصدر 1)",
+      "type": "عدد صحيح",
+      "unit": null,
+      "allowed_values": "1",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "source_page",
+      "definition_ar": "رقم الصفحة في ملف PDF للمصدر 1 (ترقيم الملف لا ترقيم الكتاب المطبوع)",
+      "type": "عدد صحيح",
+      "unit": null,
+      "allowed_values": "72–462",
+      "empty_means_ar": "قيمة محسوبة"
+    },
+    {
+      "name": "notes",
+      "definition_ar": "ملاحظات: طريقة الحساب أو سبب الفراغ",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "لا ملاحظات"
+    }
+  ],
+  "entities": {
+    "indicators": [
+      {
+        "indicator_code": "SCH_TOT",
+        "name_ar": "عدد المدارس — الإجمالي",
+        "unit": "مدرسة",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "CLS_TOT",
+        "name_ar": "عدد الفصول — الإجمالي",
+        "unit": "فصل",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SCH_GOV",
+        "name_ar": "عدد المدارس — حكومي",
+        "unit": "مدرسة",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "CLS_GOV",
+        "name_ar": "عدد الفصول — حكومي",
+        "unit": "فصل",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SCH_PRV",
+        "name_ar": "عدد المدارس — خاص",
+        "unit": "مدرسة",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "CLS_PRV",
+        "name_ar": "عدد الفصول — خاص",
+        "unit": "فصل",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SCH_URB",
+        "name_ar": "عدد المدارس — حضر",
+        "unit": "مدرسة",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "CLS_URB",
+        "name_ar": "عدد الفصول — حضر",
+        "unit": "فصل",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SCH_RUR",
+        "name_ar": "عدد المدارس — ريف",
+        "unit": "مدرسة",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "CLS_RUR",
+        "name_ar": "عدد الفصول — ريف",
+        "unit": "فصل",
+        "group_ar": "المدارس والفصول",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_TOT",
+        "name_ar": "عدد التلاميذ — الإجمالي",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_BOYS",
+        "name_ar": "عدد التلاميذ — بنون",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_GIRLS",
+        "name_ar": "عدد التلاميذ — بنات",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_GOV_B",
+        "name_ar": "عدد التلاميذ — حكومي بنون",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_GOV_G",
+        "name_ar": "عدد التلاميذ — حكومي بنات",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_PRV_B",
+        "name_ar": "عدد التلاميذ — خاص بنون",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_PRV_G",
+        "name_ar": "عدد التلاميذ — خاص بنات",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_URB_B",
+        "name_ar": "عدد التلاميذ — حضر بنون",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_URB_G",
+        "name_ar": "عدد التلاميذ — حضر بنات",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_RUR_B",
+        "name_ar": "عدد التلاميذ — ريف بنون",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "STU_RUR_G",
+        "name_ar": "عدد التلاميذ — ريف بنات",
+        "unit": "تلميذ",
+        "group_ar": "التلاميذ",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_TOT",
+        "name_ar": "عدد المدرسين — الإجمالي",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_M",
+        "name_ar": "عدد المدرسين — ذكور",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_F",
+        "name_ar": "عدد المدرسين — إناث",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_HIGH_M",
+        "name_ar": "عدد المدرسين — مؤهلات ممتازة وعليا — ذكور",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_HIGH_F",
+        "name_ar": "عدد المدرسين — مؤهلات ممتازة وعليا — إناث",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_MID_M",
+        "name_ar": "عدد المدرسين — مؤهلات فوق متوسطة تربوية ومتوسطة تربوية — ذكور",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "TCH_MID_F",
+        "name_ar": "عدد المدرسين — مؤهلات فوق متوسطة تربوية ومتوسطة تربوية — إناث",
+        "unit": "مدرس",
+        "group_ar": "المدرسون",
+        "type_ar": "منشور",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "POP_AGE",
+        "name_ar": "سكان السن الرسمية للمرحلة",
+        "unit": "نسمة",
+        "group_ar": "القيد",
+        "type_ar": "منشور",
+        "stages": [
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT"
+        ]
+      },
+      {
+        "indicator_code": "ENR_NET_N",
+        "name_ar": "المقيدون في السن الرسمية (القيد الصافي)",
+        "unit": "تلميذ",
+        "group_ar": "القيد",
+        "type_ar": "منشور",
+        "stages": [
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT"
+        ]
+      },
+      {
+        "indicator_code": "ENR_TOT_N",
+        "name_ar": "إجمالي المقيدين (القيد الإجمالي)",
+        "unit": "تلميذ",
+        "group_ar": "القيد",
+        "type_ar": "منشور",
+        "stages": [
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT"
+        ]
+      },
+      {
+        "indicator_code": "GER",
+        "name_ar": "نسبة القيد الإجمالي",
+        "unit": "%",
+        "group_ar": "القيد",
+        "type_ar": "منشور",
+        "stages": [
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT"
+        ]
+      },
+      {
+        "indicator_code": "NER",
+        "name_ar": "نسبة القيد الصافي",
+        "unit": "%",
+        "group_ar": "القيد",
+        "type_ar": "منشور",
+        "stages": [
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT"
+        ]
+      },
+      {
+        "indicator_code": "G1_ENR",
+        "name_ar": "المقيدون في الصف الأول",
+        "unit": "تلميذ",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "POP6",
+        "name_ar": "السكان في سن 6 سنوات",
+        "unit": "نسمة",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "G1_AGE6",
+        "name_ar": "المقيدون في الصف الأول بعمر 6 سنوات",
+        "unit": "تلميذ",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "GIR",
+        "name_ar": "نسبة الاستيعاب الإجمالي",
+        "unit": "%",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "NIR",
+        "name_ar": "نسبة الاستيعاب الصافي",
+        "unit": "%",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "G1_ENR_B",
+        "name_ar": "المقيدون في الصف الأول — بنون",
+        "unit": "تلميذ",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "POP6_B",
+        "name_ar": "السكان في سن 6 سنوات — بنون",
+        "unit": "نسمة",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "G1_AGE6_B",
+        "name_ar": "المقيدون في الصف الأول بعمر 6 سنوات — بنون",
+        "unit": "تلميذ",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "GIR_B",
+        "name_ar": "نسبة الاستيعاب الإجمالي — بنون",
+        "unit": "%",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "NIR_B",
+        "name_ar": "نسبة الاستيعاب الصافي — بنون",
+        "unit": "%",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "G1_ENR_G",
+        "name_ar": "المقيدون في الصف الأول — بنات",
+        "unit": "تلميذ",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "POP6_G",
+        "name_ar": "السكان في سن 6 سنوات — بنات",
+        "unit": "نسمة",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "G1_AGE6_G",
+        "name_ar": "المقيدون في الصف الأول بعمر 6 سنوات — بنات",
+        "unit": "تلميذ",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "GIR_G",
+        "name_ar": "نسبة الاستيعاب الإجمالي — بنات",
+        "unit": "%",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "NIR_G",
+        "name_ar": "نسبة الاستيعاب الصافي — بنات",
+        "unit": "%",
+        "group_ar": "الاستيعاب",
+        "type_ar": "منشور",
+        "stages": [
+          "PRI"
+        ]
+      },
+      {
+        "indicator_code": "PTR_PUB",
+        "name_ar": "نصيب المدرس من التلاميذ (منشور)",
+        "unit": "تلميذ/مدرس",
+        "group_ar": "المؤشرات",
+        "type_ar": "منشور",
+        "stages": [
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "TECH"
+        ]
+      },
+      {
+        "indicator_code": "CLASS_DENSITY",
+        "name_ar": "كثافة الفصل = التلاميذ ÷ الفصول (محسوب)",
+        "unit": "تلميذ/فصل",
+        "group_ar": "المؤشرات المحسوبة",
+        "type_ar": "محسوب",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "PTR_CALC",
+        "name_ar": "نصيب المدرس من التلاميذ = التلاميذ ÷ المدرسين (محسوب)",
+        "unit": "تلميذ/مدرس",
+        "group_ar": "المؤشرات المحسوبة",
+        "type_ar": "محسوب",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SHARE_PRIVATE_STU",
+        "name_ar": "نسبة تلاميذ التعليم الخاص (محسوب)",
+        "unit": "%",
+        "group_ar": "المؤشرات المحسوبة",
+        "type_ar": "محسوب",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SHARE_GIRLS",
+        "name_ar": "نسبة البنات من التلاميذ (محسوب)",
+        "unit": "%",
+        "group_ar": "المؤشرات المحسوبة",
+        "type_ar": "محسوب",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      },
+      {
+        "indicator_code": "SHARE_RURAL_STU",
+        "name_ar": "نسبة تلاميذ الريف (محسوب)",
+        "unit": "%",
+        "group_ar": "المؤشرات المحسوبة",
+        "type_ar": "محسوب",
+        "stages": [
+          "ALL",
+          "KG",
+          "PRI",
+          "COM",
+          "PREP",
+          "SEC_GEN",
+          "SEC_IND",
+          "SEC_AGR",
+          "SEC_COM",
+          "SEC_HOT",
+          "SPED"
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "stage": "ALL",
+        "name_ar": "كل المراحل"
+      },
+      {
+        "stage": "KG",
+        "name_ar": "ما قبل الابتدائي (رياض الأطفال)"
+      },
+      {
+        "stage": "PRI",
+        "name_ar": "الابتدائي"
+      },
+      {
+        "stage": "COM",
+        "name_ar": "التعليم المجتمعي"
+      },
+      {
+        "stage": "PREP",
+        "name_ar": "الإعدادي"
+      },
+      {
+        "stage": "SEC_GEN",
+        "name_ar": "الثانوي العام"
+      },
+      {
+        "stage": "SEC_IND",
+        "name_ar": "الثانوي الصناعي"
+      },
+      {
+        "stage": "SEC_AGR",
+        "name_ar": "الثانوي الزراعي"
+      },
+      {
+        "stage": "SEC_COM",
+        "name_ar": "الثانوي التجاري"
+      },
+      {
+        "stage": "SEC_HOT",
+        "name_ar": "الثانوي الفندقي"
+      },
+      {
+        "stage": "SPED",
+        "name_ar": "التربية الخاصة"
+      },
+      {
+        "stage": "TECH",
+        "name_ar": "التعليم الفني (جملة)"
+      }
+    ],
+    "page_map": [
+      {
+        "table_ar": "المدارس والفصول — كل المراحل",
+        "pdf_pages": "72"
+      },
+      {
+        "table_ar": "المدارس والفصول حسب المرحلة",
+        "pdf_pages": "73–82"
+      },
+      {
+        "table_ar": "التلاميذ — كل المراحل",
+        "pdf_pages": "85"
+      },
+      {
+        "table_ar": "التلاميذ حسب المرحلة",
+        "pdf_pages": "86–95"
+      },
+      {
+        "table_ar": "المدرسون — كل المراحل",
+        "pdf_pages": "291"
+      },
+      {
+        "table_ar": "المدرسون حسب المرحلة",
+        "pdf_pages": "292–301"
+      },
+      {
+        "table_ar": "الاستيعاب في الصف الأول (جملة / بنون وبنات)",
+        "pdf_pages": "409–410"
+      },
+      {
+        "table_ar": "القيد الصافي والإجمالي حسب المرحلة",
+        "pdf_pages": "412–420"
+      },
+      {
+        "table_ar": "نصيب المدرس من التلاميذ",
+        "pdf_pages": "462"
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "إصدار أول",
+      "item": "كل القاعدة",
+      "rejected_value_ar": null,
+      "adopted_value_ar": null,
+      "decision_ar": "استخراج جداول المحافظات من الكتاب الإحصائي السنوي 2025/2026 (المصدر 1) بمكتبة pdfplumber مع تحديد الأعمدة بمواقعها في الصفحة"
+    }
+  ],
+  "quality_report": {
+    "score": 4,
+    "scale_ar": "5 رسمي/دولي مكتمل بلا فجوات والعينة مطابقة؛ 4 فجوات بسيطة موثقة؛ 3 رصد متعدد المصادر أو فجوات متوسطة؛ 2 مصدر واحد غير رسمي أو فجوات كبيرة؛ 1 تجريبية",
+    "score_reason_ar": "مصدر رسمي واحد مستخرج آلياً ومتحقق حسابياً؛ ينقصه السلسلة الزمنية ومستوى الإدارة التعليمية",
+    "checks": [
+      {
+        "check_ar": "تكرار المفتاح (geo_code + stage + indicator_code + period)",
+        "scope": "كل الصفوف",
+        "result_ar": "0 مكرر",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "فحوص الاتساق الحسابي داخل الجداول وبينها",
+        "scope": "كل القيم المنشورة",
+        "result_ar": "4711 فحصاً؛ 0 مخالفة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "حصص محسوبة فوق 100%",
+        "scope": "SHARE_*",
+        "result_ar": "0 صف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "نسب قيد/استيعاب صافية منشورة فوق 100%",
+        "scope": "NER/NIR",
+        "result_ar": "27 صف: EG/PREP=103.77, EG-ALX/PREP=117.79, EG-ASN/PREP=108.25, EG-BA/PREP=138.9, EG-BH/PREP=105.1, EG-C/PREP=116.87, EG-DK/PREP=101.5, EG-DT/PREP=108.47, EG-GH/PREP=100.01, EG-GZ/PREP=117.82, EG-IS/PREP=119.25, EG-JS/PREP=135.97, EG-KB/PREP=106.13, EG-KFS/PREP=102.79, EG-MNF/PREP=106.95, EG-MT/PREP=119.23, EG-PTS/PREP=121.19, EG-SUZ/PREP=115.51, EG-WAD/PREP=107.33, EG-ALX/PRI=106.96, EG-ASN/PRI=105.33, EG-BA/PRI=109.12, EG-C/PRI=106.31, EG-JS/PRI=112.41, EG-KN/PRI=103.32, EG-MT/PRI=116.2, EG-PTS/PRI=101.1",
+        "action_ar": "منشورة كما في المصدر وتطابق إعادة الحساب؛ تعني أن تقديرات السكان في السن أقل من المقيدين (هجرة داخلية أو تقديرات سكانية قديمة). لا تعديل، ويُنصح بالحذر عند المقارنة"
+      },
+      {
+        "check_ar": "نسب القيد/الاستيعاب الإجمالي فوق 100%",
+        "scope": "GER/GIR",
+        "result_ar": "42 صف: EG-JS/PRI/GIR=108.1, EG-MT/PRI/GIR=107.1, EG-JS/PRI/GIR_B=109.39, EG-MT/PRI/GIR_B=108.05, EG-ALX/PRI/GIR_G=100.05, EG-C/PRI/GIR_G=100.04, EG-JS/PRI/GIR_G=106.73, EG-KN/PRI/GIR_G=100.23, EG-MT/PRI/GIR_G=106.07, EG/PREP/GER=111.56, EG-ALX/PREP/GER=132.29, EG-ASN/PREP/GER=112.87, EG-BA/PREP/GER=157.24, EG-BH/PREP/GER=111.7, EG-BNS/PREP/GER=106.22, EG-C/PREP/GER=131.86, EG-DK/PREP/GER=105.37, EG-DT/PREP/GER=115.83, EG-FYM/PREP/GER=104.08, EG-GH/PREP/GER=106.99, EG-GZ/PREP/GER=127.62, EG-IS/PREP/GER=127.16, EG-JS/PREP/GER=154.89, EG-KB/PREP/GER=114.2, EG-KFS/PREP/GER=107.18, EG-KN/PREP/GER=103.35, EG-MNF/PREP/GER=114.41, EG-MT/PREP/GER=131.69, EG-PTS/PREP/GER=126.58, EG-SHR/PREP/GER=102.01, EG-SUZ/PREP/GER=128.88, EG-WAD/PREP/GER=112.59, EG-ALX/PRI/GER=113.9, EG-ASN/PRI/GER=106.8, EG-BA/PRI/GER=114.74, EG-C/PRI/GER=112.47, EG-GZ/PRI/GER=102.72, EG-IS/PRI/GER=102.7, EG-JS/PRI/GER=118.47, EG-KN/PRI/GER=104.96, EG-MT/PRI/GER=120.48, EG-PTS/PRI/GER=102.06",
+        "action_ar": "مقبول منهجياً (قيد تلاميذ من خارج السن أو من محافظات أخرى)؛ لا تعديل"
+      },
+      {
+        "check_ar": "قيم سالبة",
+        "scope": "value",
+        "result_ar": "0 صف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "خلايا فارغة في المصدر",
+        "scope": "value",
+        "result_ar": "1 صف: EG-C/ALL/SCH_RUR (ص72)",
+        "action_ar": "تُركت فارغة ولم تُحوَّل إلى صفر"
+      },
+      {
+        "check_ar": "قيم شاذة (> 3 انحرافات معيارية داخل المرحلة) — CLASS_DENSITY",
+        "scope": "CLASS_DENSITY",
+        "result_ar": "5 قيمة: EG-JS/ALL=23.65, EG-WAD/KG=15.14, EG-JS/PREP=27.84, EG-JS/PRI=22.69, EG-JS/SEC_IND=11.57",
+        "action_ar": "مراجعة يدوية: لا حذف"
+      },
+      {
+        "check_ar": "قيم شاذة (> 3 انحرافات معيارية داخل المرحلة) — PTR_CALC",
+        "scope": "PTR_CALC",
+        "result_ar": "2 قيمة: EG-MT/COM=71.88, EG-GZ/SEC_COM=91.5",
+        "action_ar": "مراجعة يدوية: لا حذف"
+      },
+      {
+        "check_ar": "مقارنة نصيب المدرس المحسوب بالمنشور (ص462)",
+        "scope": "KG/PRI/PREP/SEC_GEN",
+        "result_ar": "112 مقارنة؛ متوسط الفرق 0.00 وأقصاه 0.00 تلميذ/مدرس",
+        "action_ar": "تطابق تام يؤكد صحة استخراج جداول التلاميذ والمدرسين"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS06828 EG-SHG/COM/CLS_GOV ص75",
+        "result_ar": "369.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS11430 EG-BH/COM/TCH_MID_M ص294",
+        "result_ar": "0.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS10532 EG-AST/KG/TCH_HIGH_M ص292",
+        "result_ar": "10.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS07347 EG-FYM/SEC_IND/CLS_PRV ص78",
+        "result_ar": "0.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS00739 EG-FYM/ALL/STU_GIRLS ص85",
+        "result_ar": "477991.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS07012 EG-GH/SEC_HOT/CLS_GOV ص81",
+        "result_ar": "38.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS04944 EG-KB/SEC_AGR/POP_AGE ص418",
+        "result_ar": "371503.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS01558 EG-KN/SEC_GEN/STU_GOV_G ص90",
+        "result_ar": "30010.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS04372 EG-AST/PREP/GER ص415",
+        "result_ar": "99.45 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة عينة عشوائية: إعادة قراءة الصفحة الأصلية",
+        "scope": "OBS09713 EG-SHR/SEC_AGR/SCH_URB ص79",
+        "result_ar": "23.0 — موجود في صف المحافظة",
+        "action_ar": "لا إجراء"
+      }
+    ],
+    "manual_sample": {
+      "size": 10,
+      "matched": 10
+    },
+    "arithmetic_checks": {
+      "count": 4711,
+      "failures": 0
+    }
+  }
+}

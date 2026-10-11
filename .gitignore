@@ -1,0 +1,8 @@
+**/__pycache__/
+*.pyc
+
+# Local BMAD session notes and document rendering checks
+_bmad-output/**/.memlog.md
+_bmad-output/**/qa-*/
+_bmad-output/**/*-qa.pdf
+_bmad-output/**/build_word_tmp.py

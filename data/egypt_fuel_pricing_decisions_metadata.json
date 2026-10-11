@@ -1,0 +1,1273 @@
+{
+  "id": "egypt_fuel_pricing_decisions",
+  "title_ar": "سجل قرارات تسعير الوقود في مصر",
+  "title_en": "Egypt Fuel Pricing Decisions Log",
+  "domain": "الطاقة والأسعار والمعيشة",
+  "keywords": [
+    "وقود",
+    "بنزين",
+    "سولار",
+    "لجنة التسعير التلقائي",
+    "دعم المواد البترولية",
+    "fuel prices",
+    "Egypt"
+  ],
+  "description_ar": "سجل زمني لقرارات تسعير البنزين والسولار وبقية المنتجات البترولية في مصر منذ يوليو 2019، بصف لكل منتج في كل قرار، مع السعر السابق والجديد ونسبة التغير ومصدر كل قيمة.",
+  "model": "entities",
+  "coverage": {
+    "time_start": "2019-07-05",
+    "time_end": "2026-03-10",
+    "geo_level": "national",
+    "geo_count": 1
+  },
+  "rows": 123,
+  "columns": 25,
+  "decisions": 23,
+  "join_keys": [
+    "geo_code",
+    "fiscal_year",
+    "quarter",
+    "effective_date",
+    "product_code"
+  ],
+  "sources": [
+    {
+      "source_id": 1,
+      "name": "بيان قرار لجنة التسعير التلقائي — 8 أكتوبر 2021",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_08102021_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 2,
+      "name": "بيان قرار لجنة التسعير التلقائي — 4 فبراير 2022",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop-04022022-01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 3,
+      "name": "بيان قرار لجنة التسعير التلقائي — 13 يوليو 2022",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_13072022_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 4,
+      "name": "بيان قرار لجنة التسعير التلقائي — 2 مارس 2023",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_02032023_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 5,
+      "name": "قرار لجنة التسعير التلقائي — 4 مايو 2023",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_04052023_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 6,
+      "name": "بيان قرار لجنة التسعير التلقائي — 3 نوفمبر 2023",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_02032023_02.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 7,
+      "name": "بيان قرار لجنة التسعير التلقائي — 22 مارس 2024",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_22032024_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 8,
+      "name": "اجتماع لجنة التسعير التلقائي — 18 أكتوبر 2024",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_18102024_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 9,
+      "name": "اجتماع لجنة التسعير التلقائي — 11 أبريل 2025",
+      "publisher": "وزارة البترول والثروة المعدنية",
+      "url": "https://www.petroleum.gov.eg/ar-eg/media-center/news/news-pages/Pages/mop_11042025_01.aspx",
+      "type": "رسمي",
+      "license": "بيانات حكومية عامة؛ إعادة النشر مع الإسناد",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 10,
+      "name": "زيادة أسعار الوقود للمرة 21 منذ يوليو 2019 وحتى مارس 2026 — المحطات السعرية كاملة",
+      "publisher": "بوابة الشروق",
+      "url": "https://www.shorouknews.com/news/view.aspx?cdate=10032026&id=d059de89-1dbd-4ead-a160-11ca26909baf",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 11,
+      "name": "زيادة أسعار الوقود للمرة 20 منذ يوليو 2019 وحتى 17 أكتوبر 2025 — المحطات السعرية كاملة",
+      "publisher": "بوابة الشروق",
+      "url": "https://www.shorouknews.com/news/view.aspx?cdate=16102025&id=ef41d1e3-f275-451b-b0c2-293f07721554",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 12,
+      "name": "رحلة أسعار البنزين في مصر منذ 2019 (2 مارس 2023)",
+      "publisher": "موقع السلطة (نقلاً عن بوابة أخبار اليوم)",
+      "url": "https://www.alsolta.net/241422",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 13,
+      "name": "Egypt increases fuel prices to promote economic reform (6 Jul 2019)",
+      "publisher": "Xinhua",
+      "url": "http://www.xinhuanet.com/english/2019-07/06/c_138202712.htm",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 14,
+      "name": "بالأرقام والتواريخ.. مراحل زيادة أسعار الوقود في 5 سنوات (5 يوليو 2019)",
+      "publisher": "الدستور",
+      "url": "https://www.dostor.org/2704086",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 15,
+      "name": "Egypt reduces gasoline prices by 25 piasters per litre (3 Oct 2019)",
+      "publisher": "الأهرام أونلاين",
+      "url": "https://english.ahram.org.eg/NewsContent/1/64/352143/Egypt/Politics-/Egypt-reduces-gasoline-prices-by--piasters-per-lit.aspx",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 16,
+      "name": "Egypt Cuts Gasoline Prices by EGP 0.25/liter (Apr 2020)",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/egypt-cuts-gasoline-prices-by-egp-0-25liter/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 17,
+      "name": "Egypt keeps domestic fuel prices unchanged (9 Jul 2020)",
+      "publisher": "الأهرام أونلاين",
+      "url": "https://english.ahram.org.eg/NewsContent/3/12/374009/Business/Economy/Egypt-keeps-domestic-fuel-prices-unchanged-.aspx",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 18,
+      "name": "Egypt keeps domestic gasoline prices unchanged (7 Oct 2020)",
+      "publisher": "الأهرام أونلاين",
+      "url": "https://english.ahram.org.eg/NewsContent/1/64/387862/Egypt/Politics-/Egypt-keeps-domestic-gasoline-prices-unchanged.aspx",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 19,
+      "name": "Egypt keeps fuel prices unchanged until December (7 Oct 2020)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/3/92828/Egypt-keeps-fuel-prices-unchanged-until-December",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 20,
+      "name": "Egypt Keeps Fuel Prices Unchanged for Q1 2021",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/egypt-keeps-fuel-prices-unchanged-for-q1-2021/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 21,
+      "name": "Egypt Increases Fuel Prices by EGP 0.25 in Q2 2021",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/egypt-increases-fuel-prices-by-egp-0-25-in-q2-2021/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 22,
+      "name": "Egypt raises gasoline prices by 25 piasters per liter, keeps diesel unchanged (23 Jul 2021)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/1/106236/Egypt-raises-gasoline-prices-by-25-piasters-per-liter-keeps",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 23,
+      "name": "Egypt increases gasoline prices by 25 piasters per liter for 2nd time in 3 months (8 Oct 2021)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/1/108616/Egypt-increases-gasoline-prices-by-25-piasters-per-liter-for",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 24,
+      "name": "Fuel Prices Increased by EGP 0.25 in Q2 2022",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/fuel-prices-increased-by-egp-0-25-in-q2-2022/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 25,
+      "name": "Egypt keeps gasoline, diesel prices unchanged in quarterly review (Q4 2022)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/3/120021/Egypt-keeps-gasoline-diesel-prices-unchanged-in-quarterly-review",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 26,
+      "name": "Egypt Keeps Fuel Prices Unchanged for Q4 2022",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/egypt-keeps-fuel-prices-unchanged-for-q4-2022/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 27,
+      "name": "Fuel Prices Up in Egypt (Q3 2024)",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/fuel-prices-up-in-egypt/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 28,
+      "name": "Egypt raises fuel prices for 3rd time in 2024 (18 Oct 2024)",
+      "publisher": "الأهرام أونلاين",
+      "url": "https://english.ahram.org.eg/NewsContent/3/12/533717/Business/Economy/Egypt-raises-fuel-prices-for-rd-time-in-.aspx",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 29,
+      "name": "Egypt's government moves fuel prices, freezes further hikes for at least one year (17 Oct 2025)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/3/142915/Egypt%E2%80%99s-government-moves-fuel-prices-freezes-further-hikes-for-at",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 30,
+      "name": "Egypt raises domestic fuel prices for 2nd time in 2025 (17 Oct 2025)",
+      "publisher": "Xinhua",
+      "url": "https://english.news.cn/africa/20251017/a87c1a5ce7494e06bb4aba03d58fba86/c.html",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 31,
+      "name": "Egypt raises fuel prices for the second time this year (17 Oct 2025)",
+      "publisher": "Arab News",
+      "url": "https://www.arabnews.com/node/2619220/amp",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 32,
+      "name": "Egypt increases fuel prices by LE 3 per liter (10 Mar 2026)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/3/145468/Egypt-increases-fuel-prices-by-LE-3-per-liter",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 33,
+      "name": "Egypt Raises Gasoline, CNG, Butane Prices (10 Mar 2026)",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/egypt-raises-gasoline-cng-butane-prices/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 34,
+      "name": "Egypt to resume quarterly fuel pricing mechanism from Q1 FY2026/27 (2 Jul 2026)",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/3/148132/Egypt-to-resume-quarterly-fuel-pricing-mechanism-from-Q1-FY2026",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 35,
+      "name": "أسعار البنزين في مصر.. الحكومة تحسم حقيقة الزيادة المرتقبة (24 سبتمبر 2026)",
+      "publisher": "العين الإخبارية",
+      "url": "https://al-ain.com/article/egypt-fuel-prices-increase-october-2026",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 36,
+      "name": "تعرف على موعد لجنة تسعير المنتجات البترولية (27 أبريل 2026)",
+      "publisher": "بوابة الأهرام بيزنس",
+      "url": "https://business.ahram.org.eg/News/54819.aspx",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    },
+    {
+      "source_id": 37,
+      "name": "Fuel Prices Remain Unchanged in Q3 2020",
+      "publisher": "Egypt Oil & Gas",
+      "url": "https://egyptoil-gas.com/news/fuel-prices-remain-unchanged-in-q3-2020/",
+      "type": "صحفي",
+      "license": "مادة صحفية؛ تُستخدم الوقائع السعرية فقط مع الإسناد والرابط",
+      "accessed_on": "2026-09-28"
+    }
+  ],
+  "update_frequency": "عند كل قرار للجنة التسعير، ومراجعة ربع سنوية",
+  "last_updated": "2026-09-28",
+  "next_update_expected": "أكتوبر 2026 (اجتماع لجنة التسعير المرتقب)",
+  "version": "2026.09.28",
+  "quality_score": 4,
+  "known_limitations": [
+    "لا يتضمن الإصدار أعمدة سعر برنت وسعر الصرف يوم القرار ولا فرضية الموازنة: مصادر السلاسل اليومية (EIA وFRED) محجوبة من بيئة الجمع، والبنك المركزي المصري يرفض الطلبات.",
+    "قرارات التثبيت قبل 2023 موثقة أغلبها من مصادر صحفية؛ وقد توجد اجتماعات تثبيت في 2023 و2024 لم تُنشر.",
+    "تغطية الكيروسين وغاز السيارات والمازوت والبوتاجاز جزئية؛ السلسلة الكاملة للبنزين بأنواعه والسولار فقط.",
+    "تعديل سعر البوتاجاز من 200 إلى 225 جنيهاً (منزلي) بين أبريل 2025 ومارس 2026 غير موثق التاريخ.",
+    "قرار يوليو 2019 سبق تشغيل لجنة التسعير التلقائي وأُدرج كنقطة بداية."
+  ],
+  "suggested_tier": "free",
+  "citation": "منصة قواعد بيانات مصر (MasrData)، سجل قرارات تسعير الوقود في مصر، الإصدار 2026.09.28، 28 سبتمبر 2026.",
+  "example_questions": [
+    "كم مرة تضاعف سعر لتر السولار منذ يوليو 2019، وما أكبر زيادة في قرار واحد؟",
+    "ما عدد قرارات الزيادة والخفض والتثبيت في كل عام مالي؟",
+    "ما متوسط الفترة بين قرارين للزيادة قبل تحرير سعر الصرف في مارس 2024 وبعده؟"
+  ],
+  "schema_version": "masrdata-metadata/2.0",
+  "data_files": [
+    {
+      "path": "egypt_fuel_pricing_decisions.csv",
+      "format": "csv",
+      "encoding": "utf-8-sig",
+      "rows": 123,
+      "columns": 25,
+      "primary_key": [
+        "decision_id",
+        "product_code"
+      ],
+      "role": "data"
+    },
+    {
+      "path": "egypt_fuel_pricing_decisions.xlsx",
+      "format": "xlsx",
+      "role": "human-readable workbook (data + documentation)",
+      "sheets": [
+        "البيانات",
+        "القرارات",
+        "قاموس المتغيرات",
+        "بطاقة الوصف",
+        "المصادر",
+        "سجل التغييرات",
+        "تقرير الجودة"
+      ]
+    },
+    {
+      "path": "egypt_fuel_pricing_decisions_card.md",
+      "format": "markdown",
+      "role": "description card"
+    }
+  ],
+  "variables": [
+    {
+      "name": "obs_id",
+      "definition_ar": "معرّف فريد للصف",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "OBS001…",
+      "empty_means_ar": "لا يوجد فراغ"
+    },
+    {
+      "name": "decision_id",
+      "definition_ar": "معرّف القرار (يربط بورقة القرارات)",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "D01…D23",
+      "empty_means_ar": "لا يوجد فراغ"
+    },
+    {
+      "name": "announce_date",
+      "definition_ar": "تاريخ إعلان القرار",
+      "type": "تاريخ ISO",
+      "unit": null,
+      "allowed_values": "YYYY-MM-DD",
+      "empty_means_ar": "غير مذكور في المصادر"
+    },
+    {
+      "name": "effective_date",
+      "definition_ar": "تاريخ سريان الأسعار",
+      "type": "تاريخ ISO",
+      "unit": null,
+      "allowed_values": "YYYY-MM-DD",
+      "empty_means_ar": "غير مذكور أو القرار تثبيت"
+    },
+    {
+      "name": "effective_time",
+      "definition_ar": "ساعة السريان بتوقيت القاهرة",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "HH:MM",
+      "empty_means_ar": "غير مذكورة"
+    },
+    {
+      "name": "decision_type",
+      "definition_ar": "نوع القرار",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "increase / decrease / hold",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "decision_type_ar",
+      "definition_ar": "نوع القرار بالعربية",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "زيادة / خفض / تثبيت",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "is_committee_decision",
+      "definition_ar": "هل صدر القرار عن لجنة التسعير التلقائي",
+      "type": "منطقي",
+      "unit": null,
+      "allowed_values": "True / False",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "product_code",
+      "definition_ar": "رمز المنتج",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "B80, B92, B95, DSL, KER, CNG, MZT, LPG12, LPG25",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "product_ar / product_en",
+      "definition_ar": "اسم المنتج",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "unit",
+      "definition_ar": "وحدة السعر",
+      "type": "فئة",
+      "unit": null,
+      "allowed_values": "جنيه/لتر، جنيه/م³، جنيه/طن، جنيه/أسطوانة",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "price_old",
+      "definition_ar": "السعر قبل القرار",
+      "type": "رقم عشري",
+      "unit": "جنيه",
+      "allowed_values": "> 0",
+      "empty_means_ar": "لا يوجد مصدر ولا قرار سابق موثق للمنتج"
+    },
+    {
+      "name": "price_old_is_derived",
+      "definition_ar": "True إذا أُخذ السعر السابق من السعر الجديد في آخر قرار موثق للمنتج نفسه",
+      "type": "منطقي",
+      "unit": null,
+      "allowed_values": "True / False",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "price_new",
+      "definition_ar": "السعر بعد القرار (أو السعر المثبت)",
+      "type": "رقم عشري",
+      "unit": "جنيه",
+      "allowed_values": "> 0",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "change_abs",
+      "definition_ar": "الفرق = price_new − price_old (محسوب)",
+      "type": "رقم عشري",
+      "unit": "جنيه",
+      "allowed_values": null,
+      "empty_means_ar": "السعر السابق غير متاح"
+    },
+    {
+      "name": "change_pct",
+      "definition_ar": "نسبة التغير = change_abs / price_old × 100 (محسوبة)",
+      "type": "رقم عشري",
+      "unit": "%",
+      "allowed_values": null,
+      "empty_means_ar": "السعر السابق غير متاح"
+    },
+    {
+      "name": "change_is_derived",
+      "definition_ar": "True لأن الفرق والنسبة محسوبان لا منشوران",
+      "type": "منطقي",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "geo_code",
+      "definition_ar": "رمز النطاق الجغرافي (الأسعار موحدة قومياً)",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "EG",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "fiscal_year",
+      "definition_ar": "العام المالي المصري (يوليو–يونيو) حسب تاريخ السريان أو الإعلان",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "FY2019/20…",
+      "empty_means_ar": "لا تاريخ"
+    },
+    {
+      "name": "quarter",
+      "definition_ar": "الربع التقويمي",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "2019Q3…",
+      "empty_means_ar": "لا تاريخ"
+    },
+    {
+      "name": "source_ids",
+      "definition_ar": "أرقام المصادر المؤكدة للسعر الجديد، مفصولة بفاصلة منقوطة",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": "ورقة المصادر",
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "source_url",
+      "definition_ar": "رابط المصدر الأول",
+      "type": "رابط",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "accessed_on",
+      "definition_ar": "تاريخ الوصول للمصادر",
+      "type": "تاريخ ISO",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "—"
+    },
+    {
+      "name": "notes",
+      "definition_ar": "ملاحظات وتعارضات",
+      "type": "نص",
+      "unit": null,
+      "allowed_values": null,
+      "empty_means_ar": "لا ملاحظات"
+    }
+  ],
+  "products": [
+    {
+      "code": "B80",
+      "name_ar": "بنزين 80",
+      "name_en": "Gasoline 80",
+      "unit": "جنيه/لتر"
+    },
+    {
+      "code": "B92",
+      "name_ar": "بنزين 92",
+      "name_en": "Gasoline 92",
+      "unit": "جنيه/لتر"
+    },
+    {
+      "code": "B95",
+      "name_ar": "بنزين 95",
+      "name_en": "Gasoline 95",
+      "unit": "جنيه/لتر"
+    },
+    {
+      "code": "DSL",
+      "name_ar": "سولار",
+      "name_en": "Diesel",
+      "unit": "جنيه/لتر"
+    },
+    {
+      "code": "KER",
+      "name_ar": "كيروسين",
+      "name_en": "Kerosene",
+      "unit": "جنيه/لتر"
+    },
+    {
+      "code": "CNG",
+      "name_ar": "غاز طبيعي للسيارات",
+      "name_en": "CNG for vehicles",
+      "unit": "جنيه/م³"
+    },
+    {
+      "code": "MZT",
+      "name_ar": "مازوت للصناعة (غير الكهرباء والغذاء)",
+      "name_en": "Fuel oil (mazut), general industry",
+      "unit": "جنيه/طن"
+    },
+    {
+      "code": "LPG12",
+      "name_ar": "أسطوانة بوتاجاز منزلي 12.5 كجم",
+      "name_en": "LPG cylinder, household 12.5 kg",
+      "unit": "جنيه/أسطوانة"
+    },
+    {
+      "code": "LPG25",
+      "name_ar": "أسطوانة بوتاجاز تجاري 25 كجم",
+      "name_en": "LPG cylinder, commercial 25 kg",
+      "unit": "جنيه/أسطوانة"
+    }
+  ],
+  "entities": {
+    "decisions": [
+      {
+        "decision_id": "D01",
+        "announce_date": "2019-07-05",
+        "effective_date": "2019-07-05",
+        "effective_time": null,
+        "decision_type": "increase",
+        "is_committee_decision": false,
+        "summary_ar": "رفع أسعار البنزين والسولار والبوتاجاز ضمن برنامج خفض الدعم، قبل أول قرار للجنة التسعير التلقائي",
+        "next_review_ar": "مراجعة ربع سنوية وفق السعر العالمي",
+        "source_ids": [
+          13,
+          14,
+          10
+        ],
+        "notes_ar": "آخر زيادة ضمن برنامج خفض الدعم قبل تشغيل آلية التسعير التلقائي؛ أُدرجت كنقطة بداية للسلسلة"
+      },
+      {
+        "decision_id": "D02",
+        "announce_date": "2019-10-03",
+        "effective_date": "2019-10-04",
+        "effective_time": "00:00",
+        "decision_type": "decrease",
+        "is_committee_decision": true,
+        "summary_ar": "خفض البنزين بأنواعه 25 قرشاً وخفض المازوت للصناعة 250 جنيهاً للطن وتثبيت السولار",
+        "next_review_ar": "الربع التالي",
+        "source_ids": [
+          15,
+          10,
+          12
+        ],
+        "notes_ar": "أول قرار خفض؛ المصدر ذكر هبوط برنت إلى 62 دولاراً في المتوسط (يوليو–سبتمبر) وتراجع الدولار"
+      },
+      {
+        "decision_id": "D03",
+        "announce_date": "2020-01-02",
+        "effective_date": null,
+        "effective_time": null,
+        "decision_type": "hold",
+        "is_committee_decision": true,
+        "summary_ar": "تثبيت أسعار البنزين والسولار",
+        "next_review_ar": null,
+        "source_ids": [
+          10,
+          12
+        ],
+        "notes_ar": "تاريخ الإعلان من مصدرين صحفيين فقط؛ المصدران وصفا اليوم بالجمعة بينما 2 يناير 2020 يوافق الخميس"
+      },
+      {
+        "decision_id": "D04",
+        "announce_date": "2020-04-10",
+        "effective_date": "2020-04-10",
+        "effective_time": null,
+        "decision_type": "decrease",
+        "is_committee_decision": true,
+        "summary_ar": "خفض البنزين بأنواعه 25 قرشاً وخفض المازوت للصناعة إلى 3900 جنيه للطن",
+        "next_review_ar": null,
+        "source_ids": [
+          16,
+          10,
+          12
+        ],
+        "notes_ar": "المصدر 16 ذكر أن السريان 11 أبريل؛ الشروق والسلطة ذكرا الجمعة 10 أبريل. المصدر 16 ذكر سعر الصرف 15.79 جنيه للدولار وبرنت 31.48 دولاراً"
+      },
+      {
+        "decision_id": "D05",
+        "announce_date": "2020-07-08",
+        "effective_date": null,
+        "effective_time": null,
+        "decision_type": "hold",
+        "is_committee_decision": true,
+        "summary_ar": "تثبيت أسعار البنزين والسولار",
+        "next_review_ar": null,
+        "source_ids": [
+          17,
+          10,
+          12
+        ],
+        "notes_ar": "المصدر 37 (Egypt Oil & Gas) نشر أسعاراً مختلفة (80=6.50) تخالف بقية المصادر؛ استُبعد في الأسعار ووُثّق في السجل"
+      },
+      {
+        "decision_id": "D06",
+        "announce_date": "2020-10-07",
+        "effective_date": null,
+        "effective_time": null,
+        "decision_type": "hold",
+        "is_committee_decision": true,
+        "summary_ar": "تثبيت الأسعار حتى نهاية ديسمبر 2020",
+        "next_review_ar": null,
+        "source_ids": [
+          18,
+          19,
+          10
+        ],
+        "notes_ar": "الشروق ذكرت «الأربعاء 8 أكتوبر»، والأهرام أونلاين وEgypt Today ذكرا الأربعاء 7 أكتوبر، وهو الصحيح تقويمياً"
+      },
+      {
+        "decision_id": "D07",
+        "announce_date": null,
+        "effective_date": null,
+        "effective_time": null,
+        "decision_type": "hold",
+        "is_committee_decision": true,
+        "summary_ar": "تثبيت أسعار الوقود للربع الأول 2021",
+        "next_review_ar": null,
+        "source_ids": [
+          20,
+          10
+        ],
+        "notes_ar": "تاريخ الإعلان غير مذكور في المصادر المفتوحة"
+      },
+      {
+        "decision_id": "D08",
+        "announce_date": "2021-04-23",
+        "effective_date": "2021-04-23",
+        "effective_time": null,
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين بأنواعه 25 قرشاً وتثبيت السولار والمازوت",
+        "next_review_ar": "نهاية يونيو 2021",
+        "source_ids": [
+          21,
+          10,
+          12
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D09",
+        "announce_date": "2021-07-23",
+        "effective_date": "2021-07-23",
+        "effective_time": "09:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين بأنواعه 25 قرشاً وتثبيت السولار والمازوت حتى 30 سبتمبر",
+        "next_review_ar": null,
+        "source_ids": [
+          22,
+          10,
+          12
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D10",
+        "announce_date": "2021-10-08",
+        "effective_date": "2021-10-08",
+        "effective_time": "09:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين بأنواعه 25 قرشاً وتثبيت السولار",
+        "next_review_ar": "ربع سنوي",
+        "source_ids": [
+          1,
+          23,
+          10,
+          12
+        ],
+        "notes_ar": "البيان الرسمي ذكر ارتفاع برنت 7% وسعر الدولار 0.1%"
+      },
+      {
+        "decision_id": "D11",
+        "announce_date": "2022-02-04",
+        "effective_date": "2022-02-04",
+        "effective_time": "09:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين بأنواعه 25 قرشاً وتثبيت السولار",
+        "next_review_ar": "بعد 31 مارس 2022",
+        "source_ids": [
+          2,
+          10,
+          12
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D12",
+        "announce_date": "2022-04-15",
+        "effective_date": "2022-04-15",
+        "effective_time": null,
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين 25 قرشاً والمازوت للصناعة 400 جنيه للطن وتثبيت السولار ومازوت الكهرباء والغذاء",
+        "next_review_ar": null,
+        "source_ids": [
+          24,
+          10,
+          12
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D13",
+        "announce_date": "2022-07-13",
+        "effective_date": "2022-07-13",
+        "effective_time": "09:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار والكيروسين والمازوت للصناعة، وتثبيت مازوت الكهرباء والغذاء",
+        "next_review_ar": null,
+        "source_ids": [
+          3,
+          10,
+          12
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D14",
+        "announce_date": "2022-10-07",
+        "effective_date": null,
+        "effective_time": null,
+        "decision_type": "hold",
+        "is_committee_decision": true,
+        "summary_ar": "تثبيت أسعار الوقود للربع الرابع 2022",
+        "next_review_ar": null,
+        "source_ids": [
+          25,
+          26,
+          12
+        ],
+        "notes_ar": "تاريخ الإعلان من مصدر واحد (السلطة)؛ الأسعار مؤكدة من مصدرين"
+      },
+      {
+        "decision_id": "D15",
+        "announce_date": "2023-03-02",
+        "effective_date": "2023-03-02",
+        "effective_time": "02:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والمازوت للصناعة وغاز السيارات وتثبيت السولار ومازوت الكهرباء والغذاء",
+        "next_review_ar": null,
+        "source_ids": [
+          4,
+          10,
+          12
+        ],
+        "notes_ar": "الشروق ذكرت بنزين 95 = 11.25 والبيان الرسمي 11.50؛ اعتُمد الرسمي"
+      },
+      {
+        "decision_id": "D16",
+        "announce_date": "2023-05-03",
+        "effective_date": "2023-05-04",
+        "effective_time": "02:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع السولار جنيهاً واحداً وتثبيت البنزين والمازوت",
+        "next_review_ar": null,
+        "source_ids": [
+          5
+        ],
+        "notes_ar": "اجتمعت اللجنة الأربعاء 3 مايو وسرى القرار 4 مايو؛ لم تذكره قوائم الشروق"
+      },
+      {
+        "decision_id": "D17",
+        "announce_date": "2023-11-03",
+        "effective_date": "2023-11-03",
+        "effective_time": "08:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين بأنواعه وتثبيت السولار",
+        "next_review_ar": null,
+        "source_ids": [
+          6,
+          10
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D18",
+        "announce_date": "2024-03-22",
+        "effective_date": "2024-03-22",
+        "effective_time": null,
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار وغاز السيارات والبوتاجاز",
+        "next_review_ar": null,
+        "source_ids": [
+          7,
+          10
+        ],
+        "notes_ar": "البيان الرسمي ربط القرار بتحرير سعر الصرف واضطرابات الشحن في البحر الأحمر"
+      },
+      {
+        "decision_id": "D19",
+        "announce_date": "2024-07-25",
+        "effective_date": "2024-07-25",
+        "effective_time": null,
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار والكيروسين والمازوت للصناعة، وتثبيت مازوت الكهرباء والغذاء",
+        "next_review_ar": null,
+        "source_ids": [
+          27,
+          28,
+          10
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D20",
+        "announce_date": "2024-10-18",
+        "effective_date": "2024-10-18",
+        "effective_time": null,
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار والكيروسين وغاز السيارات والمازوت للصناعة",
+        "next_review_ar": "الجلسة التالية بعد 6 أشهر",
+        "source_ids": [
+          8,
+          28,
+          10
+        ],
+        "notes_ar": null
+      },
+      {
+        "decision_id": "D21",
+        "announce_date": "2025-04-11",
+        "effective_date": "2025-04-11",
+        "effective_time": "06:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار والكيروسين والمازوت والبوتاجاز، وتثبيت غاز السيارات ومازوت الكهرباء والغذاء",
+        "next_review_ar": null,
+        "source_ids": [
+          9,
+          10,
+          11
+        ],
+        "notes_ar": "قوائم الشروق ذكرت بنزين 80 = 15.25 والبيان الرسمي 15.75؛ اعتُمد الرسمي"
+      },
+      {
+        "decision_id": "D22",
+        "announce_date": "2025-10-17",
+        "effective_date": "2025-10-17",
+        "effective_time": "06:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار وغاز السيارات نحو جنيهين",
+        "next_review_ar": "تثبيت الأسعار عاماً على الأقل",
+        "source_ids": [
+          29,
+          30,
+          31,
+          11
+        ],
+        "notes_ar": "قائمة الشروق (أكتوبر 2025) ذكرت بنزين 80 = 17.25، بينما ذكرت 3 مصادر ومعها الشروق نفسها (مارس 2026) أن السعر 17.75"
+      },
+      {
+        "decision_id": "D23",
+        "announce_date": "2026-03-10",
+        "effective_date": "2026-03-10",
+        "effective_time": "03:00",
+        "decision_type": "increase",
+        "is_committee_decision": true,
+        "summary_ar": "رفع البنزين والسولار 3 جنيهات وغاز السيارات والبوتاجاز بسبب تطورات استثنائية في أسواق الطاقة",
+        "next_review_ar": "لم يُحدد",
+        "source_ids": [
+          32,
+          33,
+          10
+        ],
+        "notes_ar": "Egypt Oil & Gas كتبت بنزين 92 = 12.25 (خطأ مطبعي واضح)؛ المصدر 32 ذكر برنت 119.50 دولاراً في الذروة ونحو 94 دولاراً يوم الإعلان"
+      }
+    ],
+    "official_statements": [
+      {
+        "statement_id": "S01",
+        "date": "2026-04-27",
+        "summary_ar": "إعلان استمرار الأسعار «حتى أكتوبر 2026 على الأقل» وتعليق المراجعات الفصلية",
+        "source_ids": [
+          36
+        ]
+      },
+      {
+        "statement_id": "S02",
+        "date": "2026-07-02",
+        "summary_ar": "رئيس الوزراء يعلن استئناف آلية التسعير الربع سنوية بدءاً من الربع الأول من العام المالي 2026/2027",
+        "source_ids": [
+          34
+        ]
+      },
+      {
+        "statement_id": "S03",
+        "date": "2026-09-24",
+        "summary_ar": "وزارة البترول تنفي الأسعار المتداولة وتؤكد أن لجنة التسعير لم تنعقد بعد",
+        "source_ids": [
+          35
+        ]
+      }
+    ]
+  },
+  "changelog": [
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "إصدار أول",
+      "item": "كل القاعدة",
+      "rejected_value_ar": null,
+      "adopted_value_ar": null,
+      "decision_ar": "بناء القاعدة من 37 مصدراً"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D15/B95",
+      "rejected_value_ar": "الشروق: 11.25",
+      "adopted_value_ar": "البيان الرسمي (4) والسلطة (12): 11.50",
+      "decision_ar": "اعتُمد 11.50"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D21/B80",
+      "rejected_value_ar": "الشروق (10، 11): 15.25",
+      "adopted_value_ar": "البيان الرسمي (9) و Egypt Today (29) و Xinhua (30) كسعر سابق: 15.75",
+      "decision_ar": "اعتُمد 15.75"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D22/B80",
+      "rejected_value_ar": "الشروق أكتوبر 2025 (11): 17.25",
+      "adopted_value_ar": "Egypt Today (29) و Xinhua (30) والشروق مارس 2026 (10): 17.75",
+      "decision_ar": "اعتُمد 17.75"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D23/B92",
+      "rejected_value_ar": "Egypt Oil & Gas (33): 12.25",
+      "adopted_value_ar": "Egypt Today (32) والشروق (10): 22.25",
+      "decision_ar": "اعتُمد 22.25؛ خطأ مطبعي في المصدر 33"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D05 كل المنتجات",
+      "rejected_value_ar": "Egypt Oil & Gas (37): 80=6.50، 92=7.75، 95=8.75",
+      "adopted_value_ar": "الأهرام أونلاين (17) والشروق (10): 6.25، 7.50، 8.50",
+      "decision_ar": "اعتُمد الأهرام والشروق؛ المصدر 37 يخالف قرار الخفض في أبريل 2020"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D06 التاريخ",
+      "rejected_value_ar": "الشروق: الأربعاء 8 أكتوبر 2020",
+      "adopted_value_ar": "الأهرام أونلاين (18) و Egypt Today (19): 7 أكتوبر",
+      "decision_ar": "اعتُمد 2020-10-07"
+    },
+    {
+      "version": "2026.09.28",
+      "change_type_ar": "تعارض مصادر",
+      "item": "D16 مايو 2023",
+      "rejected_value_ar": "قوائم الشروق لم تذكر القرار",
+      "adopted_value_ar": "البيان الرسمي (5): رفع السولار إلى 8.25",
+      "decision_ar": "أُضيف القرار من البيان الرسمي"
+    }
+  ],
+  "quality_report": {
+    "score": 4,
+    "scale_ar": "5 رسمي/دولي مكتمل بلا فجوات والعينة مطابقة؛ 4 فجوات بسيطة موثقة؛ 3 رصد متعدد المصادر أو فجوات متوسطة؛ 2 مصدر واحد غير رسمي أو فجوات كبيرة؛ 1 تجريبية",
+    "checks": [
+      {
+        "check_ar": "تكرار المفتاح (decision_id + product_code)",
+        "scope": "كل الصفوف",
+        "result_ar": "0 صف مكرر",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "اتساق السلسلة",
+        "scope": "D21/LPG12",
+        "result_ar": "السعر السابق في المصدر 150 ≠ السعر الجديد في القرار السابق D18 (100)",
+        "action_ar": "مراجعة: قد يوجد تعديل غير موثق بين القرارين"
+      },
+      {
+        "check_ar": "اتساق السلسلة",
+        "scope": "D23/LPG12",
+        "result_ar": "السعر السابق في المصدر 225 ≠ السعر الجديد في القرار السابق D21 (200)",
+        "action_ar": "مراجعة: قد يوجد تعديل غير موثق بين القرارين"
+      },
+      {
+        "check_ar": "اتساق السلسلة",
+        "scope": "D23/LPG25",
+        "result_ar": "السعر السابق في المصدر 450 ≠ السعر الجديد في القرار السابق D21 (400)",
+        "action_ar": "مراجعة: قد يوجد تعديل غير موثق بين القرارين"
+      },
+      {
+        "check_ar": "قيم سالبة أو صفرية",
+        "scope": "price_old/price_new",
+        "result_ar": "0 صف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "قرارات التثبيت بلا تغيير سعري",
+        "scope": "decision_type=hold",
+        "result_ar": "0 صف مخالف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "اتجاه التغير يوافق نوع القرار",
+        "scope": "كل الصفوف",
+        "result_ar": "0 صف مخالف",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "قيم شاذة في نسبة التغير (> 3 انحرافات معيارية)",
+        "scope": "change_pct",
+        "result_ar": "المتوسط 10.8% والانحراف 9.5؛ 1 صف: OBS116 CNG 42.86%",
+        "action_ar": "مراجعة يدوية: لا حذف"
+      },
+      {
+        "check_ar": "سعر سابق غير متاح",
+        "scope": "price_old",
+        "result_ar": "12 صف: OBS006/MZT, OBS028/MZT, OBS037/MZT, OBS048/CNG, OBS057/MZT, OBS062/KER, OBS074/CNG, OBS088/CNG, OBS089/LPG12, OBS094/KER, OBS095/MZT, OBS101/CNG",
+        "action_ar": "تُركت فارغة"
+      },
+      {
+        "check_ar": "قرارات بلا تاريخ إعلان",
+        "scope": "announce_date",
+        "result_ar": "D07",
+        "action_ar": "تُركت فارغة"
+      },
+      {
+        "check_ar": "فجوة زمنية معروفة",
+        "scope": "السلسلة",
+        "result_ar": "لا توجد قرارات تثبيت موثقة بين مايو ونوفمبر 2023 ولا في 2024 خارج الزيادات الثلاث؛ قد تكون هناك اجتماعات تثبيت لم تُنشر",
+        "action_ar": "توثيق في القيود"
+      },
+      {
+        "check_ar": "تغطية المنتجات",
+        "scope": "product_code",
+        "result_ar": "البنزين 80/92/95 والسولار مغطاة في كل القرارات تقريباً؛ الكيروسين وغاز السيارات والمازوت والبوتاجاز تغطية جزئية",
+        "action_ar": "توثيق في القيود"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS112 D22/B80 = 17.75",
+        "result_ar": "مطابق: 17.75 في المصدرين 29 و30",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS019 D04/MZT = 3900.0",
+        "result_ar": "مطابق: 3900 في المصدر 16",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS081 D17/B92 = 11.5",
+        "result_ar": "مطابق: 11.50 في البيان الرسمي 6",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS109 D21/CNG = 7.0",
+        "result_ar": "مطابق: 7 مثبت في البيان الرسمي 9 وقائمة الشروق 10",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS121 D23/CNG = 13.0",
+        "result_ar": "مطابق: 13 في المصدر 32",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS064 D14/B80 = 8.0",
+        "result_ar": "مطابق: 8 في المصدر 25",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS086 D18/B95 = 13.5",
+        "result_ar": "مطابق: 13.50 في البيان الرسمي 7",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS011 D02/MZT = 4250.0",
+        "result_ar": "مطابق: 4250 في المصدر 15",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS053 D12/B80 = 7.5",
+        "result_ar": "مطابق: 7.50 في المصدر 24",
+        "action_ar": "لا إجراء"
+      },
+      {
+        "check_ar": "مراجعة يدوية لعينة عشوائية",
+        "scope": "OBS105 D21/B95 = 19.0",
+        "result_ar": "مطابق: 19 في البيان الرسمي 9",
+        "action_ar": "لا إجراء"
+      }
+    ],
+    "manual_sample": {
+      "size": 10,
+      "matched": 10
+    }
+  }
+}
